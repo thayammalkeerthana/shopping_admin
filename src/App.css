@@ -1,0 +1,76 @@
+.login-form-container {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-logo {
+  width: 70%; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.login-container {
+  background-image: url('https://source.unsplash.com/1920x1080/?shopping'); /* replace 'nature' with your desired keyword */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebartxt{
+  font-weight: bold;
+  color:white !important;
+  cursor: pointer;
+}
+
+.checkout_btn{
+width: 30% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout_btn{
+    width: 100% !important;
+    }
+}
+.checkout_btn_size{
+font-size: 15px !important;
+font-weight:bold;
+}
+
+@media only screen and (max-width: 425px) {
+  .checkout_btn_size{
+    font-size: 10px !important;
+    font-weight:bold;
+    }
+}
+.cursor_pointer{
+cursor: pointer;
+}
+
+#dropdown-basic{
+  background-color: transparent ;
+  border-color: transparent ;
+}
+
+.content-wrapper {
+  padding: 20px;
+  background-color: #f8f9fa; /* Add your desired background color */
+  height: 100%; /* Ensure the content wrapper takes full height of the column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper h2 {
+  margin-bottom: 20px;
+}
+
+.row {
+  height: 100vh; /* Ensure the row takes full height of the viewport */
+}
+
+
