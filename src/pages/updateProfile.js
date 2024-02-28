@@ -21,6 +21,7 @@ const UpdateProfile = (props) => {
 
   useEffect(() => {
     dispatch(getRegData());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const UpdateProfile = (props) => {
         phoneNo: FilterRegData?.phonenumber,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [get_Reg_Data]);
 
   const getUserId = localStorage.getItem('userID');

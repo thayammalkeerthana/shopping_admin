@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { register } from '../redux/action';
 import { useDispatch } from 'react-redux';
-import { useHistory, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const RegisterForm = (props) => {
 const [formData, setFormData] = useState({
@@ -18,7 +18,6 @@ const [formErrors, setFormErrors] = useState({
   });
 
 const dispatch=useDispatch()
-const history=useHistory()
 
 const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -58,10 +57,8 @@ const handleSubmit = (e) => {
   "phoneNumber":'1234567890',
   "imageurl":'https://tse3.mm.bing.net/th?id=OIP.BkoXurD30qD41Q4pDKvDAAHaGH&pid=Api&P=0&h=180',
   "type":'admin'}
-  console.log("formData",{...formData,...restData});
     e.preventDefault();
     dispatch(register({...formData,...restData},props))
-    history.push('/')
 };
 
 return (

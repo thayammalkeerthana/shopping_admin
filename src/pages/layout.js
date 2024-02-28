@@ -12,15 +12,16 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     dispatch(getRegData());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getUserId = localStorage.getItem('userID');
   const FilterRegData = get_Reg_Data.find((item) => item.userid === getUserId);
 
-  console.log("get_Reg_Data",FilterRegData);
   return (
     <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
       <header className="text-light" style={{ backgroundColor: '#E7D3EE', display: 'flex', justifyContent: 'space-between' }}>
+
         <div>
           <img src="/shopping_logo (2).png" alt="Logo" />
         </div>
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
         <div className='px-3 d-flex align-items-center'>
           <span className='mx-3' style={{ fontWeight: 'bold', cursor: 'pointer' }} onClick={() => history.push('/home')}>Home</span>
           <span className='mx-2 mb-4' style={{ margin: 'auto', cursor: 'pointer' }}>
-            <img src={FilterRegData?.imageurl} className="card-img-top rounded-circle mt-2" alt={'jeans'} style={{ width: '50px', height: '50px' }} />
+            <img src={FilterRegData?.imageurl} className="card-img-top rounded-circle mt-2" alt={'profile'} style={{ width: '50px', height: '50px' }} />
           </span>
           <span style={{ margin: 'auto' }}>{FilterRegData?.username}</span>
           <span style={{ margin: 'auto' }}><DropdownComponent /></span>

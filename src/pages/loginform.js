@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
 import { login } from '../redux/action';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
@@ -17,8 +16,6 @@ const LoginForm = (props) => {
   });
 
   const dispatch = useDispatch()
-  // const history = useHistory()
-
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

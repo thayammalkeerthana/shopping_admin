@@ -17,7 +17,6 @@ const DropdownComponent = () => {
             <Dropdown.Menu>
                 <Dropdown.Item onClick={() => history.push('/home')} >Home</Dropdown.Item>
                 <Dropdown.Item onClick={() => history.push('/addProduct')}>Add Product</Dropdown.Item>
-                {/* <Dropdown.Item onClick={() => history.push('/cart')}>Cart</Dropdown.Item> */}
                 <Dropdown.Item onClick={() => history.push('/updateProfile')}>Update Profile</Dropdown.Item>
                 <Dropdown.Item onClick={() => logoutFuc()}>logout</Dropdown.Item>
             </Dropdown.Menu>

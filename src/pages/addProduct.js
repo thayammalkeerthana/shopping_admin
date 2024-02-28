@@ -22,6 +22,7 @@ const AddProduct = (props) => {
 
   useEffect(()=>{
     dispatch(getCategoryData())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const handleChange = (e) => {
@@ -84,8 +85,7 @@ const AddProduct = (props) => {
       // Update state with errors to trigger re-render and display error messages
       setFormErrors(errors);
     }
-    console.log("formDAta",typeof(formData.amount))
-    ;
+
     const randomId = Math.floor(Math.random() * 1000000) + 1; // Adjust the range as needed
 
     const data={
@@ -95,7 +95,7 @@ const AddProduct = (props) => {
       "categoryid":formData.category,
       "price":`$${formData.amount}`
       }
-      console.log("data",data);
+
       dispatch(addProduct(data,props))
   };
 
@@ -175,11 +175,13 @@ const AddProduct = (props) => {
           />
           <div className='text-danger'>{formErrors.amount}</div>
         </div>
+
         <div className='d-flex justify-content-center'>
           <button type='submit' className='btn btn-primary'>
             Add Product
           </button>
         </div>
+
       </form>
     </div>
   );
