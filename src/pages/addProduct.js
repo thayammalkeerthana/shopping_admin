@@ -95,7 +95,7 @@ const AddProduct = (props) => {
       "categoryid":formData.category,
       "price":`$${formData.amount}`
       }
-
+console.log("data",data);
       dispatch(addProduct(data,props))
   };
 
@@ -104,6 +104,7 @@ const AddProduct = (props) => {
       <form
         onSubmit={handleSubmit}
         className='p-4'
+        enctype="multipart/form-data"
         style={{
           backgroundColor: '#F5F5F5',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)',
@@ -117,10 +118,11 @@ const AddProduct = (props) => {
             Profile Image URL
           </label>
           <input
-            type='text'
+            type='file'
             className='form-control'
             placeholder='Enter image URL'
             name='productimage'
+            accept="image/*"
             value={formData.productimage}
             onChange={handleChange}
           />

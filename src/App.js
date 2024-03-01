@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" component={LoginForm} />
         <Route path="/register" component={RegisterForm} />
         <Layout>
-        <PrivateRoute exact path="/home" component={Home} isAuthenticated={isAuthenticated} />
+        <PrivateRoute path="/home" component={Home} isAuthenticated={isAuthenticated} />
         <PrivateRoute path='/updateProfile' component={UpdateProfile} isAuthenticated={isAuthenticated}/>
         <PrivateRoute path='/addProduct' component={AddProduct} isAuthenticated={isAuthenticated}/>
         </Layout>
@@ -27,6 +27,10 @@ function App() {
 }
 
 export default App;
+
+function PageNotFound(){
+  return<h1> page not found</h1>
+}
 
 
 
